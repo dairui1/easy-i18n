@@ -14,6 +14,18 @@
 
 The configuration file should export an object with your desired options. For example:
 
+## Roadmap
+
+- [ ] Support both single file and directory formats as entry points
+- [ ] Simplify configuration by automatically detecting entry format (file or directory)
+- [ ] Add user-friendly CLI prompts for configuration setup
+- [ ] Implement a `init` command to generate a default configuration file
+- [ ] Provide clear documentation and examples for each configuration option
+- [ ] Example project support for react-i18next
+- [ ] Handle complex ICU patterns (e.g., plurals, selects) correctly during translation
+- [ ] Implement JSON repair functionality for LLM translation output
+- [ ] Improve error handling and reporting for translation process
+- [ ] Add support for custom translation services beyond the default
 
 ## Local Development
 

@@ -3,19 +3,52 @@
  */
 export interface I18nCliConfig {
   /**
-   * The number of concurrent operations to run.
-   */
-  concurrency: number;
-
-  /**
    * The path to the directory containing locale files.
+   * @example 'src/locales'
    */
-  localeDirectoryPath: string;
+  localeDir: string;
 
   /**
-   * The path to the entry directory for processing.
+   * The path to the entry file or directory for processing.
+   * Can be either a single file or a directory containing multiple files.
+   * @example 'src/locales/en.json' or 'src/locales/en'
    */
-  entryDirectoryPath: string;
+  entry: string;
+
+  /**
+   * Specifies whether the entry is a single file or a directory.
+   * 'file' for a single file, 'directory' for a directory containing multiple files.
+   * @default 'directory'
+   */
+  entryType?: 'file' | 'directory';
+
+  /**
+   * The number of concurrent operations to run.
+   * @default 5
+   */
+  concurrency?: number;
+
+  /**
+   * Configuration for the Language Model (LLM) used in translation.
+   */
+  llmConfig: {
+    /**
+     * The name or identifier of the LLM model to use.
+     */
+    model: string;
+    /**
+     * The temperature setting for the LLM, controlling randomness in output.
+     */
+    temperature: number;
+    /**
+     * The maximum number of retry attempts for failed LLM requests.
+     */
+    maxRetries: number;
+    /**
+     * The top_p parameter for the LLM, controlling diversity in output.
+     */
+    topP: number | undefined;
+  };
 }
 
 /**

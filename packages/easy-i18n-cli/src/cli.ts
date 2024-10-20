@@ -28,20 +28,26 @@ program
 const options = program.opts();
 
 async function main() {
+  consola.debug('Starting main function');
   if (options.locale) {
     const targetLocale = options.locale;
     const targetFile = options.file || '';
     const targetKey = options.key;
 
+    consola.debug('Options:', { targetLocale, targetFile, targetKey });
+
     try {
+      consola.debug('Initiating translation');
       await translateDir(targetLocale, targetFile, targetKey);
       consola.success('Translation completed successfully.');
     } catch (error: any) {
-      consola.error('Error:', error.message);
+      consola.error('Error:', error);
     }
   } else {
+    consola.debug('No locale specified, outputting help');
     program.outputHelp();
   }
+  consola.debug('Main function completed');
 }
 
 main();

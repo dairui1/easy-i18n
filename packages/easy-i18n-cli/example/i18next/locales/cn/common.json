@@ -80,7 +80,7 @@
     "terms": "服务条款",
     "privacy": "隐私政策",
     "social_media": "关注我们",
-    "newsletter": "订阅我们的新闻简报",
+    "newsletter": "订阅我们的通讯",
     "contact_us": "联系我们",
     "sitemap": "网站地图",
     "copyright": {
@@ -91,22 +91,22 @@
   "user": {
     "account_settings": "账户设置",
     "order_history": "订单历史",
-    "wishlist": "心愿单",
+    "wishlist": "愿望清单",
     "addresses": {
-      "shipping": "收货地址",
+      "shipping": "送货地址",
       "billing": "账单地址"
     },
     "payment_methods": "支付方式",
     "personal_info": "个人信息"
   },
   "checkout": {
-    "shipping_address": "收货地址",
+    "shipping_address": "送货地址",
     "billing_address": "账单地址",
     "payment_method": "支付方式",
     "order_summary": "订单摘要",
     "place_order": "下单",
     "promo_code": "优惠码",
-    "total_items": "总项目数：{{count}}"
+    "total_items": "总件数：{{count}}"
   },
   "support": {
     "customer_service": "客户服务",
@@ -174,12 +174,12 @@
     "checkout_process": "结账流程",
     "payment_gateway": "支付网关",
     "ssl_certificate": "SSL证书",
-    "hosting": "主机托管",
+    "hosting": "托管",
     "domain_name": "域名",
     "bandwidth": "带宽",
     "server": "服务器",
     "database": "数据库",
-    "api": "应用程序编程接口（API）",
+    "api": "应用程序接口（API）",
     "frontend": "前端",
     "backend": "后端",
     "full_stack": "全栈",
@@ -189,6 +189,6 @@
     "agile_development": "敏捷开发",
     "scrum": "Scrum",
     "sprint": "冲刺",
-    "backlog": "待办事项"
+    "backlog": "待办事项列表"
   }
 }
