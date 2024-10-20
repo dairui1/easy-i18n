@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import { translateDir } from './translate';
+import { translateDir } from './core/translateDir';
 import consola from 'consola';
 
 import dotenv from 'dotenv';

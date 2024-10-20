@@ -9,10 +9,6 @@
     "lint": "next lint",
     "check-types": "tsc --noEmit"
   },
-  "i18n": {
-    "localeDir": "translations",
-    "entry": "en.json"
-  },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-select": "^2.0.0",

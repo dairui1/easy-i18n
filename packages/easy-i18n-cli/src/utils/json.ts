@@ -1,3 +1,4 @@
+import consola from 'consola';
 import { jsonrepair } from 'jsonrepair';
 import { z, ZodSchema } from 'zod';
 
@@ -53,7 +54,7 @@ export const parseLLMOutputForSchema = async <T extends ZodSchema>(
       JSON.parse(json);
     } catch (error) {
       // Log the error if JSON parsing fails
-      console.log('found invalid json, attempting to repair with jsonrepair...',);
+      consola.log('Found invalid json, attempting to repair with jsonrepair...',);
 
       // Attempt to repair the JSON using the jsonrepair library
       json = jsonrepair(json);

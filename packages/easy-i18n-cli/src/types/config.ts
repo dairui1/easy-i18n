@@ -11,7 +11,7 @@ export interface I18nCliConfig {
   /**
    * The path to the entry file or directory for processing.
    * Can be either a single file or a directory containing multiple files.
-   * @example 'src/locales/en.json' or 'src/locales/en'
+   * @example 'src/locales/en.json' for entryType=file or 'src/locales/en' for entryType=directory
    */
   entry: string;
 
@@ -20,7 +20,7 @@ export interface I18nCliConfig {
    * 'file' for a single file, 'directory' for a directory containing multiple files.
    * @default 'directory'
    */
-  entryType?: 'file' | 'directory';
+  entryType?: 'directory' | 'file';
 
   /**
    * The number of concurrent operations to run.

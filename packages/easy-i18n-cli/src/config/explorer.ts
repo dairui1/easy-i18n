@@ -4,7 +4,7 @@ class ExplorerConfig {
   explorer: PublicExplorerSync;
   customConfig?: string;
   constructor() {
-    this.explorer = cosmiconfigSync('i18n');
+    this.explorer = cosmiconfigSync('easyi18n');
   }
 
   loadCustomConfig(pathToConfig: string) {

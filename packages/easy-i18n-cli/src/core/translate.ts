@@ -1,9 +1,9 @@
-import consola from "consola";
 import { z } from "zod";
 import { ChatOpenAI } from "@langchain/openai";
 import { getConfig } from "@/config";
 import { chunkJson, parseLLMOutputForSchema } from '../utils/json';
 import { promptJsonTranslate } from './prompts';
+import consola from 'consola';
 
 const MAX_CHUNK_SIZE = 4096;
 
@@ -32,7 +32,7 @@ function getInputParams(targetLocale: string): { from: string; to: string; } {
   return { from, to };
 }
 
-export async function translateJSON(localeJSON: string, targetLocale: string): Promise<Record<string, any>> {
+export async function translateChunks(localeJSON: string, targetLocale: string): Promise<Record<string, any>> {
   try {
     const { from, to } = getInputParams(targetLocale);
     if (!process.env.OPENAI_API_KEY) {
@@ -41,6 +41,7 @@ export async function translateJSON(localeJSON: string, targetLocale: string): P
 
     const { llmConfig } = getConfig();
 
+    consola.info(`Initializing ChatOpenAI with model: ${llmConfig.model}`);
     const llm = new ChatOpenAI({
       model: llmConfig.model,
       temperature: llmConfig.temperature,
@@ -52,27 +53,32 @@ export async function translateJSON(localeJSON: string, targetLocale: string): P
       },
     });
 
-    const formattedChatPrompt = await promptJsonTranslate().formatPromptValue({ from, to, json: localeJSON });
-    const res = await llm.invoke(formattedChatPrompt);
-    const jsonText = typeof res.content === 'object'
-      ? res.content.toString()
-      : res.content;
+    const jsonArray = chunkJson(localeJSON, MAX_CHUNK_SIZE);
+    consola.info(`Splitting JSON into ${jsonArray.length} chunks for translation`);
 
-    const parsedJson = await parseLLMOutputForSchema(jsonText, z.record(z.any()));
+    const translatedChunks = await Promise.all(jsonArray.map(async (chunk, index) => {
+      consola.start(`Translating chunk ${index + 1}/${jsonArray.length} from ${from} to ${to}`);
+      const formattedChatPrompt = await promptJsonTranslate().formatPromptValue({ from, to, json: chunk });
+      const res = await llm.invoke(formattedChatPrompt);
+      consola.success(`Chunk ${index + 1}/${jsonArray.length} translated successfully`);
 
-    if (!parsedJson) {
-      throw new Error('No translation received from OpenAI');
-    }
+      const jsonText = typeof res.content === 'object'
+        ? res.content.toString()
+        : res.content;
 
-    return parsedJson;
+      const parsedJson = await parseLLMOutputForSchema(jsonText, z.record(z.any()));
+
+      if (!parsedJson) {
+        throw new Error('No translation received from OpenAI');
+      }
+
+      return parsedJson;
+    }));
+
+    consola.success(`All ${jsonArray.length} chunks translated successfully`);
+    return Object.assign({}, ...translatedChunks);
   } catch (error) {
-    console.error('Translate chunk JSON Error:', error);
+    consola.error('Translate chunks JSON Error:', error);
     return {};
   }
-}
-
-export async function translateChunks(localeJSON: string, targetLocale: string): Promise<Record<string, any>> {
-  const jsonArray = chunkJson(localeJSON, MAX_CHUNK_SIZE);
-  const translatedChunks = await Promise.all(jsonArray.map(chunk => translateJSON(chunk, targetLocale)));
-  return Object.assign({}, ...translatedChunks);
 }

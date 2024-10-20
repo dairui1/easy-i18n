@@ -1,21 +1,36 @@
 import { memoize } from 'lodash-es';
-import { I18nCliConfig } from '../types/config';
 import { explorer } from './explorer';
 
-const DEFAULT_CONFIG: I18nCliConfig = {
-  localeDir: 'example/i18next/locales',
-  entryType: 'directory',
-  entry: 'example/i18next/locales/en',
-  concurrency: 5,
-  llmConfig: {
-    model: 'anthropic/claude-3.5-sonnet',
-    temperature: 0,
-    maxRetries: 2,
-    topP: undefined,
-  }
-};
+import { z } from 'zod';
+
+const llmConfigSchema = z.object({
+  model: z.string().default('gpt-4o'),
+  temperature: z.number().default(0.3),
+  maxRetries: z.number().default(3),
+  topP: z.number().nullable().optional(),
+});
+
+const configSchema = z.object({
+  localeDir: z.string(),
+  entry: z.string(),
+  entryType: z.enum(['directory', 'file']).optional().default('directory'),
+  concurrency: z.number().optional().default(5),
+  llmConfig: llmConfigSchema,
+});
 
 export const getConfig = memoize(() => {
   const userConfig = explorer.getConfigFile();
-  return { ...DEFAULT_CONFIG, ...userConfig };
-}) as () => I18nCliConfig;
+  if (!userConfig) {
+    throw new Error('Configuration error: No configuration file found. Please create a configuration file like "easyi18n.config.ts".');
+  }
+
+  try {
+    return configSchema.parse(userConfig);
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      const issues = error.issues.map(issue => `${issue.path.join('.')}: ${issue.message}`).join('\n');
+      throw new Error(`Configuration validation error:\n${issues}`);
+    }
+    throw error;
+  }
+}) as () => z.infer<typeof configSchema>;
