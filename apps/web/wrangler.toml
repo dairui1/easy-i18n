@@ -1,0 +1,16 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "web"
+compatibility_date = "2024-10-11"
+main = "./build/worker/index.js"
+assets = { directory = "./build/client" }
+
+# Custom domain
+routes = [
+  { pattern = "easy-i18n.com", custom_domain = true }
+]
+
+# Workers Logs
+# Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
+# Configuration: https://developers.cloudflare.com/workers/observability/logs/workers-logs/#enable-workers-logs
+[observability]
+enabled = true
