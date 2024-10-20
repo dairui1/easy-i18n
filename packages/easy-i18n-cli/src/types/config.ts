@@ -64,4 +64,24 @@ export interface EnvConfig {
    * OpenAI API Host URL.
    */
   OPENAI_API_HOST: string;
+
+  /**
+   * Flag to enable LangChain tracing v2.
+   */
+  LANGCHAIN_TRACING_V2: string;
+
+  /**
+   * The endpoint URL for LangChain API.
+   */
+  LANGCHAIN_ENDPOINT: string;
+
+  /**
+   * API key for authenticating with LangChain services.
+   */
+  LANGCHAIN_API_KEY: string;
+
+  /**
+   * The identifier for the LangChain project being used.
+   */
+  LANGCHAIN_PROJECT: string;
 }

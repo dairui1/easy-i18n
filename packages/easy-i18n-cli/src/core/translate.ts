@@ -5,7 +5,14 @@ import { chunkJson, parseLLMOutputForSchema } from '../utils/json';
 import { promptJsonTranslate } from './prompts';
 import consola from 'consola';
 
-const MAX_CHUNK_SIZE = 4096;
+/**
+ * Maximum size of a JSON chunk for translation.
+ * This value is estimated based on my experience.
+ * It represents a balance between processing efficiency and API limitations.
+ * Larger chunks might lead to API errors, while smaller chunks could increase
+ * the number of API calls and overall processing time.
+ */
+const MAX_CHUNK_SIZE = 8000;
 
 function getInputParams(targetLocale: string): { from: string; to: string; } {
   const from = 'English';

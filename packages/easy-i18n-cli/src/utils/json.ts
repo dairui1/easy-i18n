@@ -5,32 +5,26 @@ import { z, ZodSchema } from 'zod';
 export function chunkJson(json: string, maxChunkSize: number): string[] {
   const jsonObject = JSON.parse(json);
   const chunks: string[] = [];
+  let chunk: Record<string, any> = {};
+  let currentChunkSize = 0;
 
-  function chunkObject(obj: Record<string, any>) {
-    let chunk: Record<string, any> = {};
-    let currentChunkSize = 0;
+  for (const [key, value] of Object.entries(jsonObject)) {
+    const valueString = JSON.stringify(value);
+    const entrySize = key.length + valueString.length + 5; // 5 accounts for quotes and colon
 
-    const keys = Object.keys(obj);
-    for (const key of keys) {
-      const value = obj[key];
-      const valueString = JSON.stringify(value);
-
-      if (currentChunkSize + key.length + valueString.length + 5 > maxChunkSize) {
-        chunks.push(JSON.stringify(chunk));
-        chunk = {};
-        currentChunkSize = 0;
-      }
-
-      chunk[key] = value;
-      currentChunkSize += key.length + valueString.length + 5;
-    }
-
-    if (Object.keys(chunk).length > 0) {
+    if (currentChunkSize + entrySize > maxChunkSize && Object.keys(chunk).length > 0) {
       chunks.push(JSON.stringify(chunk));
+      chunk = {};
+      currentChunkSize = 0;
     }
+
+    chunk[key] = value;
+    currentChunkSize += entrySize;
   }
 
-  chunkObject(jsonObject);
+  if (Object.keys(chunk).length > 0) {
+    chunks.push(JSON.stringify(chunk));
+  }
 
   return chunks;
 }

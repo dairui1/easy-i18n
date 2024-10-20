@@ -26,7 +26,7 @@
   },
   "navigation": {
     "home": "首页",
-    "about": "关于",
+    "about": "关于我们",
     "contact": "联系",
     "products": "产品",
     "services": "服务",
@@ -59,7 +59,7 @@
     "validation_error": "验证错误",
     "network_error": "网络错误",
     "try_again": "请稍后再试",
-    "form_errors": "请更正以下错误："
+    "form_errors": "请纠正以下错误："
   },
   "products": {
     "add_to_cart": "添加到购物车",
@@ -72,7 +72,7 @@
     "stock": {
       "status": "库存状态",
       "in_stock": "有货",
-      "low_stock": "库存低",
+      "low_stock": "低库存",
       "out_of_stock": "缺货"
     }
   },
@@ -173,13 +173,13 @@
     "shopping_cart": "购物车",
     "checkout_process": "结账流程",
     "payment_gateway": "支付网关",
-    "ssl_certificate": "SSL 证书",
+    "ssl_certificate": "SSL证书",
     "hosting": "托管",
     "domain_name": "域名",
     "bandwidth": "带宽",
     "server": "服务器",
     "database": "数据库",
-    "api": "应用程序编程接口 (API)",
+    "api": "API (应用程序编程接口)",
     "frontend": "前端",
     "backend": "后端",
     "full_stack": "全栈",
