@@ -1,6 +1,6 @@
 {
   "name": "@easyi18n/cli",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.1",
   "description": "",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -27,6 +27,9 @@
     "start": "node ./dist/cli.js",
     "test": "npm run build && node ./dist/cli.js -l all",
     "check-types": "tsc --noEmit"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [],
   "author": "",
