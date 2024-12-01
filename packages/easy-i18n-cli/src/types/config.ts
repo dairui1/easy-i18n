@@ -35,19 +35,19 @@ export interface I18nCliConfig {
     /**
      * The name or identifier of the LLM model to use.
      */
-    model: string;
+    model?: string;
     /**
      * The temperature setting for the LLM, controlling randomness in output.
      */
-    temperature: number;
+    temperature?: number;
     /**
      * The maximum number of retry attempts for failed LLM requests.
      */
-    maxRetries: number;
+    maxRetries?: number;
     /**
      * The top_p parameter for the LLM, controlling diversity in output.
      */
-    topP: number | undefined;
+    topP?: number | undefined;
   };
 }
 

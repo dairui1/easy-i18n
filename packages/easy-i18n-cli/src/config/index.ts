@@ -1,4 +1,4 @@
-import { memoize } from 'lodash-es';
+import { memoize } from 'lodash';
 import { explorer } from './explorer';
 
 import { z } from 'zod';
@@ -8,6 +8,11 @@ const llmConfigSchema = z.object({
   temperature: z.number().default(0.3),
   maxRetries: z.number().default(3),
   topP: z.number().nullable().optional(),
+}).default({
+  model: 'gpt-4o',
+  temperature: 0.3,
+  maxRetries: 3,
+  topP: null,
 });
 
 const configSchema = z.object({

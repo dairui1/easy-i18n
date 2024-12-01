@@ -1,7 +1,7 @@
 import path from 'path';
 import consola from 'consola';
 import { mapSeries, mapLimit } from 'async';
-import { get, set } from 'lodash-es';
+import { get, set } from 'lodash';
 import { translateChunks } from './translate';
 import { writeFile, readFile, readDir } from '../utils/file';
 import { getConfig } from '../config';

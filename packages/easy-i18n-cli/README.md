@@ -6,11 +6,11 @@
 
 @easyi18n/cli uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for configuration file support. This means you can configure it in multiple ways:
 
-1. `i18n` property in `package.json`
-2. `.i18nrc` file in JSON or YAML format
-3. `.i18nrc.json`, `.i18nrc.yaml`, `.i18nrc.yml`, `.i18nrc.js`, `.i18nrc.ts`, `.i18nrc.mjs`, or `.i18nrc.cjs` file
-4. `i18nrc`, `i18nrc.json`, `i18nrc.yaml`, `i18nrc.yml`, `i18nrc.js`, `i18nrc.ts`, `i18nrc.mjs`, or `i18nrc.cjs` file inside a `.config` subdirectory
-5. `i18n.config.js`, `i18n.config.ts`, `i18n.config.mjs`, or `i18n.config.cjs` file
+1. `easyi18n` property in `package.json`
+2. `.easyi18nrc` file in JSON or YAML format
+3. `.easyi18nrc.json`, `.easyi18nrc.yaml`, `.easyi18nrc.yml`, `.easyi18nrc.js`, `.easyi18nrc.ts`, `.easyi18nrc.mjs`, or `.easyi18nrc.cjs` file
+4. `easyi18nrc`, `easyi18nrc.json`, `easyi18nrc.yaml`, `easyi18nrc.yml`, `easyi18nrc.js`, `easyi18nrc.ts`, `easyi18nrc.mjs`, or `easyi18nrc.cjs` file inside a `.config` subdirectory
+5. `easyi18n.config.js`, `easyi18n.config.ts`, `easyi18n.config.mjs`, or `easyi18n.config.cjs` file
 
 The configuration file should export an object with your desired options. For example:
 
