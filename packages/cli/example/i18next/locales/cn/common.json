@@ -1,0 +1,194 @@
+{
+  "common": {
+    "welcome": "欢迎，{{username}}",
+    "login": "登录",
+    "signup": "注册",
+    "logout": "登出",
+    "settings": "设置",
+    "profile": "个人资料",
+    "search": "搜索",
+    "notifications": "通知",
+    "help": "帮助",
+    "language": "语言",
+    "theme": {
+      "label": "主题",
+      "options": {
+        "light": "明亮模式",
+        "dark": "黑暗模式",
+        "system": "系统默认"
+      }
+    },
+    "back": "返回",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑"
+  },
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "contact": "联系",
+    "products": "产品",
+    "services": "服务",
+    "blog": "博客",
+    "faq": "常见问题",
+    "careers": "职业",
+    "dashboard": "仪表盘"
+  },
+  "auth": {
+    "email": "电子邮件",
+    "password": "密码",
+    "forgot_password": "忘记密码？",
+    "remember_me": "记住我",
+    "login_with": "使用{{provider}}登录",
+    "create_account": "创建账户",
+    "already_have_account": "已经有账户？",
+    "password_strength": {
+      "label": "密码强度",
+      "weak": "弱",
+      "medium": "中",
+      "strong": "强"
+    },
+    "verification_code": "输入验证码",
+    "resend_code": "{{seconds}}秒后重新发送代码"
+  },
+  "errors": {
+    "not_found": "页面未找到",
+    "server_error": "内部服务器错误",
+    "unauthorized": "未授权访问",
+    "validation_error": "验证错误",
+    "network_error": "网络错误",
+    "try_again": "请稍后再试",
+    "form_errors": "请纠正以下错误："
+  },
+  "products": {
+    "add_to_cart": "添加到购物车",
+    "remove_from_cart": "从购物车中移除",
+    "out_of_stock": "缺货",
+    "description": "描述",
+    "reviews": "评论 ({{count}})",
+    "related_products": "相关产品",
+    "quantity": "数量",
+    "stock": {
+      "status": "库存状态",
+      "in_stock": "有货",
+      "low_stock": "低库存",
+      "out_of_stock": "缺货"
+    }
+  },
+  "footer": {
+    "terms": "服务条款",
+    "privacy": "隐私政策",
+    "social_media": "关注我们",
+    "newsletter": "订阅我们的新闻通讯",
+    "contact_us": "联系我们",
+    "sitemap": "网站地图",
+    "copyright": {
+      "text": "版权 © {{year}} {{companyName}}。保留所有权利。",
+      "company": "您的公司名称"
+    }
+  },
+  "user": {
+    "account_settings": "账户设置",
+    "order_history": "订单历史",
+    "wishlist": "愿望清单",
+    "addresses": {
+      "shipping": "送货地址",
+      "billing": "账单地址"
+    },
+    "payment_methods": "支付方式",
+    "personal_info": "个人信息"
+  },
+  "checkout": {
+    "shipping_address": "送货地址",
+    "billing_address": "账单地址",
+    "payment_method": "支付方式",
+    "order_summary": "订单摘要",
+    "place_order": "下订单",
+    "promo_code": "优惠码",
+    "total_items": "总商品数：{{count}}"
+  },
+  "support": {
+    "customer_service": "客户服务",
+    "live_chat": "在线聊天",
+    "ticket_system": "提交工单",
+    "knowledge_base": "知识库",
+    "faq_search": "搜索常见问题",
+    "contact_form": "联系表单",
+    "response_time": {
+      "label": "平均响应时间",
+      "value": "{{time}}小时"
+    }
+  },
+  "dates": {
+    "today": "今天",
+    "tomorrow": "明天",
+    "yesterday": "昨天",
+    "next_week": "下周",
+    "last_week": "上周"
+  },
+  "notifications": {
+    "new_message": "您有来自{{sender}}的新消息",
+    "friend_request": "{{name}}向您发送了好友请求",
+    "clear_all": "清除所有通知",
+    "mark_as_read": "标记为已读",
+    "order_status": {
+      "label": "订单状态",
+      "processing": "处理中",
+      "shipped": "已发货",
+      "delivered": "已送达"
+    }
+  },
+  "web_terms": {
+    "submit": "提交",
+    "reset": "重置",
+    "refresh": "刷新",
+    "upload": "上传",
+    "download": "下载",
+    "drag_and_drop": "拖放",
+    "browse": "浏览",
+    "cookie": "Cookie",
+    "cache": "缓存",
+    "homepage": "主页",
+    "landing_page": "着陆页",
+    "sidebar": "侧边栏",
+    "footer": "页脚",
+    "header": "头部",
+    "navigation": "导航",
+    "menu": "菜单",
+    "dropdown": "下拉菜单",
+    "modal": "模态框",
+    "popup": "弹出窗口",
+    "tooltip": "工具提示",
+    "placeholder": "占位符",
+    "form_validation": "表单验证",
+    "responsive_design": "响应式设计",
+    "accessibility": "无障碍",
+    "seo": "搜索引擎优化 (SEO)",
+    "analytics": "分析",
+    "user_experience": "用户体验 (UX)",
+    "user_interface": "用户界面 (UI)",
+    "content_management_system": "内容管理系统 (CMS)",
+    "e_commerce": "电子商务",
+    "shopping_cart": "购物车",
+    "checkout_process": "结账流程",
+    "payment_gateway": "支付网关",
+    "ssl_certificate": "SSL证书",
+    "hosting": "托管",
+    "domain_name": "域名",
+    "bandwidth": "带宽",
+    "server": "服务器",
+    "database": "数据库",
+    "api": "API (应用程序编程接口)",
+    "frontend": "前端",
+    "backend": "后端",
+    "full_stack": "全栈",
+    "version_control": "版本控制",
+    "repository": "代码库",
+    "bug_tracking": "缺陷跟踪",
+    "agile_development": "敏捷开发",
+    "scrum": "Scrum",
+    "sprint": "冲刺",
+    "backlog": "待办事项"
+  }
+}

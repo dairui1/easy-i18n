@@ -1,0 +1,194 @@
+{
+  "common": {
+    "welcome": "Welcome, {{username}}",
+    "login": "Log In",
+    "signup": "Sign Up",
+    "logout": "Log Out",
+    "settings": "Settings",
+    "profile": "Profile",
+    "search": "Search",
+    "notifications": "Notifications",
+    "help": "Help",
+    "language": "Language",
+    "theme": {
+      "label": "Theme",
+      "options": {
+        "light": "Light Mode",
+        "dark": "Dark Mode",
+        "system": "System Default"
+      }
+    },
+    "back": "Back",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "products": "Products",
+    "services": "Services",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "careers": "Careers",
+    "dashboard": "Dashboard"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "forgot_password": "Forgot Password?",
+    "remember_me": "Remember Me",
+    "login_with": "Log in with {{provider}}",
+    "create_account": "Create Account",
+    "already_have_account": "Already have an account?",
+    "password_strength": {
+      "label": "Password Strength",
+      "weak": "Weak",
+      "medium": "Medium",
+      "strong": "Strong"
+    },
+    "verification_code": "Enter verification code",
+    "resend_code": "Resend code in {{seconds}} seconds"
+  },
+  "errors": {
+    "not_found": "Page not found",
+    "server_error": "Internal server error",
+    "unauthorized": "Unauthorized access",
+    "validation_error": "Validation error",
+    "network_error": "Network error",
+    "try_again": "Please try again later",
+    "form_errors": "Please correct the following errors:"
+  },
+  "products": {
+    "add_to_cart": "Add to Cart",
+    "remove_from_cart": "Remove from Cart",
+    "out_of_stock": "Out of Stock",
+    "description": "Description",
+    "reviews": "Reviews ({{count}})",
+    "related_products": "Related Products",
+    "quantity": "Quantity",
+    "stock": {
+      "status": "Stock Status",
+      "in_stock": "In Stock",
+      "low_stock": "Low Stock",
+      "out_of_stock": "Out of Stock"
+    }
+  },
+  "footer": {
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "social_media": "Follow Us",
+    "newsletter": "Subscribe to Our Newsletter",
+    "contact_us": "Contact Us",
+    "sitemap": "Sitemap",
+    "copyright": {
+      "text": "Copyright © {{year}} {{companyName}}. All rights reserved.",
+      "company": "Your Company Name"
+    }
+  },
+  "user": {
+    "account_settings": "Account Settings",
+    "order_history": "Order History",
+    "wishlist": "Wishlist",
+    "addresses": {
+      "shipping": "Shipping Address",
+      "billing": "Billing Address"
+    },
+    "payment_methods": "Payment Methods",
+    "personal_info": "Personal Information"
+  },
+  "checkout": {
+    "shipping_address": "Shipping Address",
+    "billing_address": "Billing Address",
+    "payment_method": "Payment Method",
+    "order_summary": "Order Summary",
+    "place_order": "Place Order",
+    "promo_code": "Promo Code",
+    "total_items": "Total Items: {{count}}"
+  },
+  "support": {
+    "customer_service": "Customer Service",
+    "live_chat": "Live Chat",
+    "ticket_system": "Submit a Ticket",
+    "knowledge_base": "Knowledge Base",
+    "faq_search": "Search FAQs",
+    "contact_form": "Contact Form",
+    "response_time": {
+      "label": "Average Response Time",
+      "value": "{{time}} hours"
+    }
+  },
+  "dates": {
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "yesterday": "Yesterday",
+    "next_week": "Next week",
+    "last_week": "Last week"
+  },
+  "notifications": {
+    "new_message": "You have a new message from {{sender}}",
+    "friend_request": "{{name}} sent you a friend request",
+    "clear_all": "Clear all notifications",
+    "mark_as_read": "Mark as read",
+    "order_status": {
+      "label": "Order Status",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered"
+    }
+  },
+  "web_terms": {
+    "submit": "Submit",
+    "reset": "Reset",
+    "refresh": "Refresh",
+    "upload": "Upload",
+    "download": "Download",
+    "drag_and_drop": "Drag and drop",
+    "browse": "Browse",
+    "cookie": "Cookie",
+    "cache": "Cache",
+    "homepage": "Homepage",
+    "landing_page": "Landing Page",
+    "sidebar": "Sidebar",
+    "footer": "Footer",
+    "header": "Header",
+    "navigation": "Navigation",
+    "menu": "Menu",
+    "dropdown": "Dropdown",
+    "modal": "Modal",
+    "popup": "Popup",
+    "tooltip": "Tooltip",
+    "placeholder": "Placeholder",
+    "form_validation": "Form Validation",
+    "responsive_design": "Responsive Design",
+    "accessibility": "Accessibility",
+    "seo": "SEO (Search Engine Optimization)",
+    "analytics": "Analytics",
+    "user_experience": "User Experience (UX)",
+    "user_interface": "User Interface (UI)",
+    "content_management_system": "Content Management System (CMS)",
+    "e_commerce": "E-commerce",
+    "shopping_cart": "Shopping Cart",
+    "checkout_process": "Checkout Process",
+    "payment_gateway": "Payment Gateway",
+    "ssl_certificate": "SSL Certificate",
+    "hosting": "Hosting",
+    "domain_name": "Domain Name",
+    "bandwidth": "Bandwidth",
+    "server": "Server",
+    "database": "Database",
+    "api": "API (Application Programming Interface)",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "full_stack": "Full Stack",
+    "version_control": "Version Control",
+    "repository": "Repository",
+    "bug_tracking": "Bug Tracking",
+    "agile_development": "Agile Development",
+    "scrum": "Scrum",
+    "sprint": "Sprint",
+    "backlog": "Backlog"
+  }
+}

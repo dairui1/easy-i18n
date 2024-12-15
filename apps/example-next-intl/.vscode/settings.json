@@ -1,0 +1,12 @@
+{
+    "i18n-ally.localesPaths": [
+        "translations"
+    ],
+    "i18n-ally.keystyle": "nested",
+    "i18n-ally.translate.engines": [
+        "openai"
+    ],
+    "i18n-ally.translate.openai.apiRoot": "https://api.siliconflow.cn",
+    "i18n-ally.translate.openai.apiKey": "sk-uspmyurifluofcjtxxakmvbprbmnnhaazgaymicmwmnbaypd",
+    "i18n-ally.translate.openai.apiModel": "deepseek-ai/DeepSeek-V2.5"
+}
